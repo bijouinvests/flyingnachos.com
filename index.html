@@ -601,23 +601,31 @@
     <h3 style="color:var(--yellow);">Throwback Nacho Shirt</h3>
     <p>$35</p>
    <div style="display:flex;gap:8px;justify-content:center;margin:10px 0;flex-wrap:wrap;">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-asphalt-front-and-back-6a3c42288118f.png" style="width:40px;height:40px;cursor:pointer;border:2px solid var(--yellow);" alt="Asphalt">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-berry-front-and-back-6a3c422881308.png" style="width:40px;height:40px;cursor:pointer;" alt="Berry">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-black-front-and-back-6a3c4228813b7.png" style="width:40px;height:40px;cursor:pointer;" alt="Black">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-cardinal-front-and-back-6a3c422881459.png" style="width:40px;height:40px;cursor:pointer;" alt="Cardinal">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-forest-front-and-back-6a3c4228814b8.png" style="width:40px;height:40px;cursor:pointer;" alt="Forest">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-maroon-front-and-back-6a3c42288150a.png" style="width:40px;height:40px;cursor:pointer;" alt="Maroon">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-military-green-front-and-back-6a3c42288155c.png" style="width:40px;height:40px;cursor:pointer;" alt="Military Green">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-orange-front-and-back-6a3c4228815ac.png" style="width:40px;height:40px;cursor:pointer;" alt="Orange">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-red-front-and-back-6a3c4228815f9.png" style="width:40px;height:40px;cursor:pointer;" alt="Red">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-team-purple-front-and-back-6a3c422881646.png" style="width:40px;height:40px;cursor:pointer;" alt="Team Purple">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-true-royal-front-and-back-6a3c422881692.png" style="width:40px;height:40px;cursor:pointer;" alt="True Royal">
-  <img onclick="changeImage(this)" src="unisex-staple-t-shirt-yellow-front-and-back-6a3c4228816de.png" style="width:40px;height:40px;cursor:pointer;" alt="Yellow">
+ <div style="display:flex;gap:8px;justify-content:center;margin:10px 0;flex-wrap:wrap;" id="swatches">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-asphalt-front-and-back-6a3c42288118f.png" style="width:40px;height:40px;cursor:pointer;border:2px solid var(--yellow);" alt="Asphalt">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-berry-front-and-back-6a3c422881308.png" style="width:40px;height:40px;cursor:pointer;" alt="Berry">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-black-front-and-back-6a3c4228813b7.png" style="width:40px;height:40px;cursor:pointer;" alt="Black">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-cardinal-front-and-back-6a3c422881459.png" style="width:40px;height:40px;cursor:pointer;" alt="Cardinal">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-forest-front-and-back-6a3c4228814b8.png" style="width:40px;height:40px;cursor:pointer;" alt="Forest">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-maroon-front-and-back-6a3c42288150a.png" style="width:40px;height:40px;cursor:pointer;" alt="Maroon">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-military-green-front-and-back-6a3c42288155c.png" style="width:40px;height:40px;cursor:pointer;" alt="Military Green">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-orange-front-and-back-6a3c4228815ac.png" style="width:40px;height:40px;cursor:pointer;" alt="Orange">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-red-front-and-back-6a3c4228815f9.png" style="width:40px;height:40px;cursor:pointer;" alt="Red">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-team-purple-front-and-back-6a3c422881646.png" style="width:40px;height:40px;cursor:pointer;" alt="Team Purple">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-true-royal-front-and-back-6a3c422881692.png" style="width:40px;height:40px;cursor:pointer;" alt="True Royal">
+  <img onclick="selectColor(this)" src="unisex-staple-t-shirt-yellow-front-and-back-6a3c4228816de.png" style="width:40px;height:40px;cursor:pointer;" alt="Yellow">
 </div>
-      <!-- Add more color images here -->
+<script>
+function selectColor(el) {
+  document.querySelectorAll('#swatches img').forEach(img => img.style.border = '2px solid transparent');
+  el.style.border = '2px solid var(--yellow)';
+  document.getElementById('mainImage').src = el.src;
+}
+</script>
     </div>
-<div style="clear:both;margin-top:15px;">
+<div style="margin-top:20px;">
   <button class="btn btn-primary" style="width:100%;">Buy Now</button>
+</div>
 </div>
   </div>
 </div>
